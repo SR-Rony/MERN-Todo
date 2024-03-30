@@ -10,7 +10,7 @@ const UserList = () => {
 
     useEffect(()=>{
         const usersFun=async()=>{
-            const allUser = await axios.get("http://localhost:8000/api/user")
+            const allUser = await axios.get("https://todo-backend-gjcy.onrender.com/api/user")
             setUsers(allUser.data.users);
         }
         usersFun()

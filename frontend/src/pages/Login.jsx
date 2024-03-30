@@ -24,7 +24,7 @@ const Login = () => {
       }
 
         const usersFun=async()=>{
-            const allUser = await axios.get("http://localhost:8000/api/user")
+            const allUser = await axios.get("https://todo-backend-gjcy.onrender.com/api/user")
             let users =allUser.data.users
             setUsers(users)
         }
@@ -33,7 +33,7 @@ const Login = () => {
 
   const onFinish = async(values) => {
     setLoading(true)
-    await axios.post("http://localhost:8000/api/user/login",{
+    await axios.post("https://todo-backend-gjcy.onrender.com/api/user/login",{
       email:values.email,
       password:values.password
     })

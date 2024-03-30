@@ -65,7 +65,7 @@ const postUser = async(req,res)=>{
             subject:"action activation email",
             html:`
                 <h1>Hello ${name}</h1>
-                <p>please click hear to <a href="http://localhost:5173/verification/${token}">active your email</a></p>
+                <p>please click hear to <a href="https://mern-todo-taupe.vercel.app/verification/${token}">active your email</a></p>
             `
         }
         // user verification email send
@@ -183,7 +183,7 @@ const forgotPassword =async(req,res)=>{
             subject:"reset your password",
             html:`
                 <h1>for your email ${email}</h1>
-                <p>please click hear to <a href="http://localhost:5173/newpassword/${token}">set new password</a></p>
+                <p>please click hear to <a href="https://mern-todo-taupe.vercel.app/newpassword/${token}">set new password</a></p>
             `
         }
       let sendEmail = await emailNodmailer(emailData)

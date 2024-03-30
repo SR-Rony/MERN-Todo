@@ -14,7 +14,7 @@ const Verification = () => {
 
         let token = param.token
         async function verifi (){
-        await axios.post("https://todo-backend-gjcy.onrender.com/api/user/verify",{
+        await axios.post("http://localhost:8000/api/user/verify",{
             token:token
         }).then((res)=>{
             console.log(res);

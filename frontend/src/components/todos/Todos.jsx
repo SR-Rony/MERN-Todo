@@ -19,7 +19,7 @@ const Todos = () => {
     useEffect(()=>{
         const myTodo = async ()=>{
             // setLoding(true)
-           let todos = await axios.get("https://todo-backend-gjcy.onrender.com/api/todos")
+           let todos = await axios.get("http://localhost:8000/api/todos")
           setAllTodos(todos.data.data)
         }
         myTodo()
@@ -27,7 +27,7 @@ const Todos = () => {
 
     // add todo button
     const handleAddTodo =async()=>{
-        await axios.post("https://todo-backend-gjcy.onrender.com/api/todos",{
+        await axios.post("http://localhost:8000/api/todos",{
             todo:inpValue
         })
         .then(()=>{
@@ -39,7 +39,7 @@ const Todos = () => {
     // update todo button
     const handleUpdateTodo = async()=>{
         setAddButton(true)
-        await axios.put(`https://todo-backend-gjcy.onrender.com/api/todos/${updateId}`,{
+        await axios.put(`http://localhost:8000/api/todos/${updateId}`,{
             todo:inpValue
         })
         .then(()=>{
@@ -57,7 +57,7 @@ const Todos = () => {
 
     // handle delete todo button
     const handleDelete = async(item)=>{
-        await axios.delete(`https://todo-backend-gjcy.onrender.com/api/todos/${item._id}`)
+        await axios.delete(`http://localhost:8000/api/todos/${item._id}`)
     }
 
     

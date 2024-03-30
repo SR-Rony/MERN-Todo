@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     const onFinish = async(values) => {
         console.log(values);
         setLoading(true)
-        await axios.post("https://todo-backend-gjcy.onrender.com/api/user/forgot_password",{
+        await axios.post("http://localhost:8000/api/user/forgot_password",{
           email:values.email,
         })
         .then((res)=>{

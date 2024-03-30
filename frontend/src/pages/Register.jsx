@@ -24,7 +24,7 @@ const Register = () => {
     // console.log('Success:', values.images);
     setLoading(true)
 
-    await axios.post("https://todo-backend-gjcy.onrender.com/api/user/register",{
+    await axios.post("http://localhost:8000/api/user/register",{
         name:values.name,
         email:values.email,
         password:values.password,

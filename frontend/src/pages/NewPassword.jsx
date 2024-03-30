@@ -15,7 +15,7 @@ const NewPassword = () => {
     const onFinish = async(values) => {
         // console.log(values);
         setLoading(true)
-        await axios.post("https://todo-backend-gjcy.onrender.com/api/user/update_password",{
+        await axios.post("http://localhost:8000/api/user/update_password",{
           password:values.password,
           token:params.token
         })
